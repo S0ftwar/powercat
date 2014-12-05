@@ -16,8 +16,7 @@
   .PARAMETER t
     Timeout for connecting and listening in seconds. Default is 60.
 #>
-function powercat
-{
+ [cmdletbinding()]
   param(
     [string]$c="",
     [Parameter(Mandatory=$True,Position=-1)][string]$p="",
@@ -407,4 +406,4 @@ function powercat
     }
     catch{}
   }
-}
+
